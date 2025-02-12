@@ -10,6 +10,7 @@ class KpiTile extends StackedView<KpiTileModel> {
   String indicatorStatus;
   String indicatorYearOverYearComparison;
   Icon icon;
+  Color? color;
 
   KpiTile(
       {super.key,
@@ -17,7 +18,8 @@ class KpiTile extends StackedView<KpiTileModel> {
       required this.indicatorValue,
       required this.indicatorStatus,
       required this.indicatorYearOverYearComparison,
-      required this.icon});
+      required this.icon,
+      this.color});
 
   @override
   Widget builder(
@@ -49,7 +51,7 @@ class KpiTile extends StackedView<KpiTileModel> {
                   children: [
                     icon,
                     Text(indicatorStatus,
-                        style: const TextStyle(color: Colors.greenAccent)),
+                        style: TextStyle(color: color ?? Colors.greenAccent)),
                   ],
                 ),
                 Text(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:logistics_dashboard/ui/widgets/common/kpi_tile/kpi_tile.dart';
+import 'package:logistics_dashboard/ui/widgets/common/pie_chart/pie_chart.dart';
 import 'package:stacked/stacked.dart';
 
 import 'home_viewmodel.dart';
@@ -15,11 +16,12 @@ class HomeView extends StackedView<HomeViewModel> {
   ) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: false,
         title: const Text(
           'Logistics Dashboard',
           style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
         ),
-        actions: [
+        actions: const [
           // DropdownButtonFormField(items: [], onChanged: (value) => {})
         ],
       ),
@@ -38,7 +40,7 @@ class HomeView extends StackedView<HomeViewModel> {
                       indicatorValue: '430,000',
                       indicatorStatus: '20%',
                       indicatorYearOverYearComparison: 'From Previous Year',
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.arrow_upward,
                         color: Colors.greenAccent,
                       ),
@@ -48,7 +50,7 @@ class HomeView extends StackedView<HomeViewModel> {
                       indicatorValue: '730,000',
                       indicatorStatus: '50%',
                       indicatorYearOverYearComparison: 'From Previous Year',
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.arrow_upward,
                         color: Colors.greenAccent,
                       ),
@@ -58,7 +60,7 @@ class HomeView extends StackedView<HomeViewModel> {
                       indicatorValue: '40%',
                       indicatorStatus: '2.2%',
                       indicatorYearOverYearComparison: 'From Previous Year',
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.arrow_upward,
                         color: Colors.greenAccent,
                       ),
@@ -68,7 +70,7 @@ class HomeView extends StackedView<HomeViewModel> {
                       indicatorValue: '530,000',
                       indicatorStatus: '40%',
                       indicatorYearOverYearComparison: 'From Previous Year',
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.arrow_upward,
                         color: Colors.greenAccent,
                       ),
@@ -78,13 +80,15 @@ class HomeView extends StackedView<HomeViewModel> {
                       indicatorValue: '530,000',
                       indicatorStatus: '1.1%',
                       indicatorYearOverYearComparison: 'From Previous Year',
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.arrow_downward,
                         color: Colors.redAccent,
                       ),
+                      color: Colors.redAccent,
                     )
                   ],
                 ),
+                SizedBox(width: 300, height: 400, child: PieChart(false))
               ],
             ),
           ),
