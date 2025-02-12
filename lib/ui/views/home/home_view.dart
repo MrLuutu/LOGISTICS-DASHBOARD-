@@ -88,7 +88,11 @@ class HomeView extends StackedView<HomeViewModel> {
                     )
                   ],
                 ),
-                SizedBox(width: 300, height: 400, child: PieChart(false))
+                const Row(
+                  children: [
+                    PieChart(),
+                  ],
+                )
               ],
             ),
           ),
