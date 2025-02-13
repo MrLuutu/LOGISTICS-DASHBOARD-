@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:logistics_dashboard/ui/widgets/common/bar_chart/bar_chart.dart';
 import 'package:logistics_dashboard/ui/widgets/common/kpi_tile/kpi_tile.dart';
 import 'package:logistics_dashboard/ui/widgets/common/pie_chart/pie_chart.dart';
 import 'package:stacked/stacked.dart';
@@ -89,9 +90,8 @@ class HomeView extends StackedView<HomeViewModel> {
                   ],
                 ),
                 const Row(
-                  children: [
-                    PieChart(),
-                  ],
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [PieChart(), BarChart()],
                 )
               ],
             ),

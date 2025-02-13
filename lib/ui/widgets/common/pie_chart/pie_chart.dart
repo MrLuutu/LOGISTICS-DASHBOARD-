@@ -17,7 +17,7 @@ class PieChart extends StackedView<PieChartModel> {
   ) {
     return Card(
       child: SizedBox(
-        width: screenWidth(context) / 2,
+        width: screenWidth(context) * 0.38,
         height: screenHeight(context) / 3,
         child: Column(
           children: [
