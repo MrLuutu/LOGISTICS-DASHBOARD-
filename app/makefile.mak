@@ -13,11 +13,11 @@ $(VENV_DIR):
 
 # Install dependencies
 install: $(VENV_DIR)
-	$(PIP) install -r ../app/requirements.txt
+	$(PIP) install -r ./app/requirements.txt
 
 # Run the Streamlit app
 run: install
-	$(STREAMLIT) run ../app/main.py
+	$(STREAMLIT) run ./app/main.py
 
 # Clean up temporary files
 clean:
